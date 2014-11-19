@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Generator{
     private ArrayList<Student> students; //List of students fed to generator at init for generating groups
     private ArrayList<Group> groups; //List of groups, to be outputted
@@ -7,7 +9,7 @@ public class Generator{
     public Generator(ArrayList<Student> classList, boolean aimlow, int groupSize){
     	this.aimLow = aimlow;
     	this.groupSize = groupSize;
-    	this.students = classlist;
+    	this.students = classList;
     }
     
     public ArrayList<Student> generate(){
