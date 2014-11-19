@@ -1,0 +1,71 @@
+import java.util.ArrayList;
+
+/**
+*
+* Created by Clodomir while working on students needs
+* Tuesday, Nov 18th.
+* 
+*/
+
+class Preferences {
+    private ArrayList<Student> wouldLikeToWorkWith;
+    private ArrayList<Student> wouldNotLikeToWorkWith;
+
+    public Preferences() {
+    }
+
+    public ArrayList<Student> getWouldLikeToWorkWithList() {
+        return wouldLikeToWorkWith;
+    }
+    
+     public ArrayList<Student> getWouldNotLikeToWorkWithList() {
+        return wouldNotLikeToWorkWith;
+    }
+
+    public void addToWouldLikeToWorkWith(Student student) {
+        this.wouldLikeToWorkWith.add(student);
+    }
+
+    public void addToWouldNotLikeToWorkWith(Student student) {
+        this.wouldNotLikeToWorkWith.add(student);
+    }
+    
+    public boolean removeFromWouldNotLikeList(int studentNumber) {
+        Student student =  this.search(studentNumber, this.wouldNotLikeToWorkWith);
+        if(student != null){
+            this.wouldNotLikeToWorkWith.remove(student);
+            return true;
+        }
+        else
+            return false;
+    }
+    
+    public boolean removeFromWouldLikeList(int studentNumber) {
+        Student student =  this.search(studentNumber, this.wouldLikeToWorkWith);
+        if(student != null){
+            this.wouldLikeToWorkWith.remove(student);
+            return true;
+        }
+        else
+            return false;
+    }
+     
+    public Student search(int studentNumber, ArrayList<Student> list) {
+        Student student = null;
+
+        if (list.isEmpty()) {
+            return null;
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            if (studentNumber == list.get(i).getStudentNumber()) {
+                student = list.get(i);
+            }
+
+        }
+        return student;
+    }
+
+       
+    
+}

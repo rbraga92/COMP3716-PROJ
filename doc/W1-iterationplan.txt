@@ -1,0 +1,24 @@
+Iteration Plan - By Friday, November 21, 2014
+
+1)	Functionality in regards to students needs to be in place 
+	(add/remove student from the class list, modify student properties, 
+	ability to belong to a group, has preferences, etc).
+
+2)	Ability to feed class list and settings into a GENERATOR class and 
+	get a list of GROUPS back out (although for the near future, generator 
+	doesn’t need to do much more than take a group size, and spit out 
+	the appropriately sized groups of any students, for this week at least).
+
+3)	Need to implement scheduling, both private and public based. Likely done 
+	in one hour blocks by day of week(day of week and 9-10, 10-11, etc).
+
+4)	Basic “rate 1-10” assessment module, with weighted questions, returns something 
+	(a number from some sort of weighting formula?).
+
+5)	Need a list of student info for testing, and associated capability to feed 
+	into the program with some sort of option during initialization.
+	
+6)	Some sort of interface, provide basic functionality now, but will be a WIP
+	over the course of the project. For now, a Java console with numeric options
+	should be enough to show functionality, but since the interface should be
+	properly segmented, a GUI can be introduced if desired.

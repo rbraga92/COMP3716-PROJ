@@ -1,0 +1,15 @@
+Fields:
+
+Student Number, Last Name, First Name, M0 (Monday at hour starting at 0), 
+M1 (Monday at hour starting at 1), …, M23 (Monday at hour starting at 23), 
+T0 (Tuesday at hour starting at 0), …, W0 (Wednesday at hour starting at 0),
+ …, R0 (Thursday at hour starting at 0), … , F0 (Friday at hour starting at 0),
+  …, S0 (Saturday at hour starting at 0), …, U0 (Sunday at hour starting at 0).
+
+Explanation of availability types:
+
+Y: Available.
+N: Not available.
+X: Not available, not an allowable hour for work.
+C: Not available, in class.
+P: Not available, personal reasons.
