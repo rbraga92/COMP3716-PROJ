@@ -24,7 +24,7 @@ public class Assessment
 		for(Question q:question)
 			mark+=q.getMark();
 		for(Skill s:skill)
-			mark+=s.getMark();
+			mark+=s.getRate();
 		return mark+grade;
 	}
 	public int getGrade()
@@ -61,6 +61,6 @@ public class Assessment
 	}
 	public Skill removeSkill(int index)
 	{
-		return skill.size();
+		return skill.remove(index);
 	}
 }
