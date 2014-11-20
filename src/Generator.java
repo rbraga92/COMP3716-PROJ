@@ -12,12 +12,12 @@ public class Generator{
     	this.students = classList;
     }
     
-    public ArrayList<Student> generate(){
+    public ArrayList<Group> generate(){
     	
     	if(students.size()%groupSize==0){//if groups will be even, just generate groups with groupSize people per group
     		groups = new ArrayList<Group>(students.size()/groupSize);
     		for (int i=0; i<students.size();i++){
-    			(groups.get(i/groupSize)).add(students.get(i));
+    			(groups.get(i/groupSize)).addStudent(students.get(i));
     		}
     		return groups;
     	}
@@ -29,13 +29,13 @@ public class Generator{
     	if(aimLow){
         	groups = new ArrayList<Group>(students.size()/groupSize + 1);
     	} else {
-        	groups = new ArrayList<Group>(students.size()/groupsize);
+        	groups = new ArrayList<Group>(students.size()/groupSize);
     	}
     	groups = new ArrayList<Group>(noOfGroups);
     	for (int i=0; i<students.size();i++){ 
     		//adds student i to the group that is numbered by
     		// i%groups.size().  This will generate 
-			(groups.get(i%(groups.size())).add(students.get(i));
+			groups.get(i%(groups.size())).addStudent(students.get(i));
 		}
 		return groups;
     }
