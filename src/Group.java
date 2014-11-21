@@ -10,46 +10,31 @@ import java.util.ArrayList;
  *
  */
 
-public class Group {
-   private ArrayList<Student> groupMembers;
-  
-    public void addStudent(Student student) {
-        this.groupMembers.add(student);
-    }
-    
-    public boolean removeStudent(int studentNumber) {
-        Student student =  this.getStudent(studentNumber);
-        
-        if(student != null){
-            this.groupMembers.remove(student);            
-            return true;
-        }
-        else
-            return false;
-    }    
-   
-     public ArrayList<Student> getStudents() {
-        return this.groupMembers;
-    }
-    public int groupSize(){
-    	return this.groupMembers.size();
-    }
-     public Student getStudent(int studentNumber) {
-        Student student = null;
-
-        if (this.groupMembers.isEmpty()) {
-            return null;
-        }
-
-        for (int i = 0; i < this.groupMembers.size(); i++) {
-            if (this.groupMembers.get(i).getStudentNumber() == studentNumber) {
-                student = this.groupMembers.get(i);
-            }
-
-        }
-        return student;
-    }
-     
-    
-   
+public class Group{
+	private ArrayList<Student> groupMembers=new ArrayList<Student>();
+	public void addStudent(Student student){
+		this.groupMembers.add(student);
+	}
+	public boolean removeStudent(int studentNumber){
+		if(student!=null){
+			this.groupMembers.remove(this.getStudent(studentNumber));
+			return true;
+		}
+		return false;
+	}
+	public ArrayList<Student> getStudents(){
+		return this.groupMembers;
+	}
+	public int groupSize(){
+		return this.groupMembers.size();
+	}
+	public Student getStudent(int studentNumber){
+		Student student=null;
+		for(int i=0;i<this.groupMembers.size();i++){
+			if(this.groupMembers.get(i).getStudentNumber()==studentNumber){
+				student=this.groupMembers.get(i);
+			}
+		}
+		return student;
+	}
 }

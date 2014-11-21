@@ -44,8 +44,7 @@ public class importCSV{
 								"Ginette","Cindy","Melinda","Edna"};
 
 		for(int i=0; i < numberOfStudents; i++){
-			String studentName = lastNames[i] + ", " + firstNames[i];
-			listOfStudents.addStudent(new Student(studentName, studentNumbers[i]));
+			listOfStudents.addStudent(new Student(lastNames[i] + ", " + firstNames[i], studentNumbers[i]));
 		}
 
 	}
