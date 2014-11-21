@@ -6,8 +6,17 @@
 ****************************************************************/
 
 public class importCSV{
-	public void importFromFile(String fileName, ClassList listOfStudents, int numberOfStudents)	{
-		//should pull from a CSV file maybe
+	public void importFromFile(String fileName, ClassList listOfStudents)	{
+		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		String line;
+        
+		 while ((line = br.readLine()) !=null) {
+        		String[] tmp = line.split(",");
+        		String name = tmp[1]+" "+tmp[2];
+        		Student student = new student(name, tmp[0]);
+        		listOfStudents.addStudent(student);
+        	}
+        	br.close();
 	}
 	
 	public static void importStatic(ClassList listOfStudents, int numberOfStudents)
