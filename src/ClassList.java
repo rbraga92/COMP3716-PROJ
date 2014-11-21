@@ -31,8 +31,9 @@ public class ClassList {
 		this.students.add(student);
 	}
 	public boolean removeStudent(int studentNumber){
+		Student student=this.getStudent(studentNumber);
 		if(student!=null){
-			this.students.remove(this.getStudent(studentNumber));
+			this.students.remove(student);
 			return true;
 		}
 		return false;
