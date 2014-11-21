@@ -13,8 +13,8 @@ public class Student{
     private Schedule publicSchedule;
     private Assessment selfAssessment;  //Skills/grades included.
     private Preferences studentPreferences;
-    //private Mandates professorMandates;
-    //Mandates not yet implemented.
+    private Mandates professorMandates;
+    
 
     public Student(String studentName, int studentNumber) {
         this.studentName = studentName;
