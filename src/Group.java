@@ -16,8 +16,9 @@ public class Group{
 		this.groupMembers.add(student);
 	}
 	public boolean removeStudent(int studentNumber){
+		Student student=this.getStudent(studentNumber);
 		if(student!=null){
-			this.groupMembers.remove(this.getStudent(studentNumber));
+			this.groupMembers.remove(student);
 			return true;
 		}
 		return false;

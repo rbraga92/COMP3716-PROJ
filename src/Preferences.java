@@ -23,15 +23,17 @@ class Preferences{
 		this.wouldNotLikeToWorkWith.add(student);
 	}
 	public boolean removeFromWouldNotLikeList(int studentNumber){
+		Student student=this.search(studentNumber,this.wouldNotLikeToWorkWith);
 		if(student!=null){
-			this.wouldNotLikeToWorkWith.remove(this.search(studentNumber,this.wouldNotLikeToWorkWith));
+			this.wouldNotLikeToWorkWith.remove(student);
 			return true;
 		}
 		return false;
 	}
 	public boolean removeFromWouldLikeList(int studentNumber){
+		Student student=this.search(studentNumber,this.wouldLikeToWorkWith);
 		if(student!=null){
-			this.wouldLikeToWorkWith.remove(this.search(studentNumber,this.wouldLikeToWorkWith));
+			this.wouldLikeToWorkWith.remove(student);
 			return true;
 		}
 		return false;

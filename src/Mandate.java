@@ -7,11 +7,8 @@ import java.util.ArrayList;
 * 
 */
 class Mandates {
-    private ArrayList<Student> canWorkWith;
-    private ArrayList<Student> cannotWorkWith;
-
-    public Mandates() {
-    }
+    private ArrayList<Student> canWorkWith=new ArrayList<Student>();
+    private ArrayList<Student> cannotWorkWith=new ArrayList<Student>();
 
     public ArrayList<Student> getCanWorkWithList() {
         return canWorkWith;
@@ -35,8 +32,7 @@ class Mandates {
             this.cannotWorkWith.remove(student);
             return true;
         }
-        else
-            return false;
+        return false;
     }
     
     public boolean removeCanWorkWithList(int studentNumber) {
@@ -45,16 +41,11 @@ class Mandates {
             this.canWorkWith.remove(student);
             return true;
         }
-        else
-            return false;
+        return false;
     }
      
     public Student search(int studentNumber, ArrayList<Student> list) {
         Student student = null;
-
-        if (list.isEmpty()) {
-            return null;
-        }
 
         for (int i = 0; i < list.size(); i++) {
             if (studentNumber == list.get(i).getStudentNumber()) {
