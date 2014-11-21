@@ -14,6 +14,10 @@ public class ClassList {
     public ClassList(ArrayList<Student> students) {
         this.students = students;
     }
+    
+    public ClassList(){
+    	return;
+    }
 
     public ArrayList<Student> getList() {
         return students;
@@ -47,6 +51,12 @@ public class ClassList {
         } else {
             return false;
         }
+    }
+    
+    public String toString(){
+    	String listStudents = "hello";
+    	//parse through here
+    	return listStudents;
     }
 
 }

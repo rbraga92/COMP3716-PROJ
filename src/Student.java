@@ -72,4 +72,8 @@ public class Student{
     public void setStudentPreferences(Preferences studentPreferences) {
         this.studentPreferences = studentPreferences;
 	}
+    
+    public String toString(){
+    	return studentNumber + ": " + studentName;
+    }
 }
