@@ -13,12 +13,14 @@ public class Student{
     private Schedule publicSchedule;
     private Assessment selfAssessment;  //Skills/grades included.
     private Preferences studentPreferences;
-    private Mandates professorMandates;
+    //private Mandates professorMandates;
+    //Mandates not yet implemented.
 
     public Student(String studentName, int studentNumber) {
         this.studentName = studentName;
         this.studentNumber = studentNumber;
-        this.professorMandates = new Mandates();
+        //this.professorMandates = new Mandates();
+        //Mandates not yet implemented.
         this.studentPreferences = new Preferences();
     }
 
@@ -34,9 +36,9 @@ public class Student{
         return publicSchedule;
     }
 
-    public Mandates getProfessorMandates() {
+    /*public Mandates getProfessorMandates() {
         return professorMandates;
-    }
+    }*/ //not yet implemented
 
     public Schedule getPrivateSchedule() {
         return privateSchedule;
