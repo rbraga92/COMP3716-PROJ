@@ -19,8 +19,7 @@ public class Student{
     public Student(String studentName, int studentNumber) {
         this.studentName = studentName;
         this.studentNumber = studentNumber;
-        //this.professorMandates = new Mandates();
-        //Mandates not yet implemented.
+        this.professorMandates = new Mandates();
         this.studentPreferences = new Preferences();
     }
 
@@ -36,9 +35,9 @@ public class Student{
         return publicSchedule;
     }
 
-    /*public Mandates getProfessorMandates() {
+    public Mandates getProfessorMandates() {
         return professorMandates;
-    }*/ //not yet implemented
+    } 
 
     public Schedule getPrivateSchedule() {
         return privateSchedule;
@@ -58,7 +57,7 @@ public class Student{
 
 /*
  *Student Public schedule is obtained from "MUN's servers". 
- *However to simulation proproses this method receives an schedule. 
+ *However to simulation propose this method receives an schedule. 
  * Clodomir
  */
     public void setPublicSchedule(Schedule publicSchedule) {  
